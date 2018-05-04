@@ -4,6 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import ca.uw.cs.cs446.githubreader.R;
+
 /**
  * Created by cassiano on 09/01/18.
  */
@@ -19,6 +21,11 @@ public class RepoItemViewHolder extends RecyclerView.ViewHolder {
 
     public RepoItemViewHolder(View itemView) {
         super(itemView);
+
+        // Get references to view components
+        nameTextView = itemView.findViewById(R.id.repoName);
+        languageTextView = itemView.findViewById(R.id.repoLanguage);
+        descriptionTextView = itemView.findViewById(R.id.repoDescription);
     }
 
 }

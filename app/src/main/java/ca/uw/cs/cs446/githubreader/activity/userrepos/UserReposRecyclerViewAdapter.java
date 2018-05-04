@@ -4,7 +4,6 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,16 +33,8 @@ public class UserReposRecyclerViewAdapter extends RecyclerView.Adapter<RepoItemV
         ConstraintLayout repoItemView = (ConstraintLayout) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item_repo, parent, false);
 
-        // Get references to view components
-        TextView repoNameView = repoItemView.findViewById(R.id.repoName);
-        TextView repoLanguageView = repoItemView.findViewById(R.id.repoLanguage);
-        TextView repoDescriptionView = repoItemView.findViewById(R.id.repoDescription);
-
         // Create a new ViewHolder instance and attach references to it
         RepoItemViewHolder viewHolder = new RepoItemViewHolder(repoItemView);
-        viewHolder.nameTextView = repoNameView;
-        viewHolder.languageTextView = repoLanguageView;
-        viewHolder.descriptionTextView = repoDescriptionView;
 
         return viewHolder;
     }
